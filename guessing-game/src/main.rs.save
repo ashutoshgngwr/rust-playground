@@ -1,7 +1,0 @@
-use std::io;
-
-fn main() {
-    println!("This computer just thought of a number. Find out what is it!");
-    println!("Take a guess!");
-    let mut guess = String::new()
-}
