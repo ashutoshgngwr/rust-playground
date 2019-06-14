@@ -30,11 +30,11 @@ fn main() {
     // println!("s1 = {}", s1); // won't work because the reference is dropped after creating a fresh mutable refernce.
     println!("s2 = {}", s2);
 
-    // dangling reference. value is dropped because its owner wasn't transferred
+    // dangling reference. value is dropped because its ownership wasn't transferred
     let s = dangling_reference();
 }
 
 fn dangling_reference() -> String { // not returning `&String` for the sake of compilation
     let s = String::from("Hello, world!");
-    s // &s // returning ownership `s` would work just fine but `&s`
+    s // &s // returning ownership `s` would work just fine but not `&s`
 }
